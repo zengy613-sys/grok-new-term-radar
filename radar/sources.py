@@ -86,6 +86,11 @@ def x_new(cfg: dict, state: Path) -> dict:
     handles = accounts(cfg)
     if not handles:
         return {"skipped": True}
+    try:
+        aisa.key()
+    except aisa.AisaError:
+        # Paid path. The free monitor leaves x_accounts empty; a list without a key is skipped, not a failed run.
+        return {"skipped": True, "no_key": True}
     data, cost = aisa.call_all([{"call_id": h, "tool": "get_twitter_user_last_tweets", "arguments": {"userName": h}}
                                 for h in handles])
     posts = []

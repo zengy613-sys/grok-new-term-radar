@@ -224,7 +224,9 @@ def _review_lines(cfg: dict, rev: dict, summ: dict) -> list[str]:
 def _status_lines(b: dict[str, dict], extra: dict[str, dict]) -> list[str]:
     x, hf, bo, sm = b["x"], b["hf"], b["breakout"], b["sitemap"]
     lines = ["", t("status_h"), ""]
-    if not x.get("skipped"):
+    if x.get("no_key"):
+        lines.append(t("st_x", state=t("x_nokey_short")))
+    elif not x.get("skipped"):
         ok = "" if x.get("error") else t("st_x_ok", answered=x["answered"], accounts=x["accounts"], posts=x["posts"]) + \
             (t("st_x_first") if x.get("first_run") else "")
         lines.append(t("st_x", state=_state(x, ok)))

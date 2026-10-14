@@ -12,7 +12,7 @@ Signals:
   ⑥ revenue   products people pay for, growing fastest or newly listed (weekly; TrustMRR key)
   ⑦ asks      what people ask for on Reddit ("is there an AI tool that…"), sized (weekly; AIsa)
   ④ gsc       queries your own site got impressions for, for the first time (optional)
-  ⑤ review    leads from 14 days ago checked in Google Trends; hit rate per signal (AIsa)
+  ⑤ review    leads from 14 days ago checked in Google Trends; hit rate per signal (AIsa; off unless review.per_day)
   usecases    the generic terms behind today's names, sized against a benchmark keyword (AIsa)
 
   python -m radar keywords "name one" "name two" [--repo "name one=owner/repo"] [--json]
@@ -28,8 +28,13 @@ review's verdicts and the hit rate per signal; it costs nothing.
 name or an error. `daily` runs everything; give it `--skip x,hf` when `sources` runs
 apart, and it lists the ① leads of the last day from the database instead.
 
-A small model scores every term: the name of a specific new thing, or a common word?
+The free default scores every term with a local heuristic (stop words, known terms, common
+words, long fine-tune titles). Set judge.model to a chat model to use the paid name judge.
 Names lead the report and are kept in state/radar.db for the review.
+
+With no config.json, config.example.json is used. Paid signals (X, new sites, revenue,
+asks, the keyword table, the review) are off until you opt in, and a missing key skips
+them instead of failing the run.
 """
 from __future__ import annotations
 
@@ -106,7 +111,7 @@ def cmd_daily(args, cfg: dict, state: Path) -> int:
     extra["usecases"] = run(lambda: usecases.run(cfg, state, list(dict.fromkeys(names)), repos, texts=about),
                             "usecases" in args.skip or not cfg["usecases"]["per_day"])
     run(lambda: store.record(conn, report.usecase_leads(extra["usecases"])))
-    rev = run(lambda: review.review(cfg, conn), "review" in args.skip)
+    rev = run(lambda: review.review(cfg, conn), "review" in args.skip or not cfg["review"]["per_day"])
     summ = run(lambda: store.summary(conn))
     text = report.daily(cfg, lead, blocks, found, rev, summ, extra)
     if args.out:

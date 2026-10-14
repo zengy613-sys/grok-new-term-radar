@@ -1,6 +1,6 @@
 ---
 name: ai-listening
-description: Collect what is new in AI in the last 24 hours across X, Hugging Face, GitHub and sitemaps, deduplicated, as one report of names that are starting to surge. Use when the user asks what is new or trending in AI today, wants a daily AI listening report, or needs fresh names of models, products and repositories to feed keyword research. Runs the new-term-radar command line; needs an AISA_API_KEY.
+description: Collect what is new in AI in the last 24 hours across Hugging Face, GitHub and sitemaps, deduplicated, as one report of names that are starting to surge. Use when the user asks what is new or trending in AI today, wants a daily AI listening report, or needs fresh names of models, products and repositories. Runs the new-term-radar command line with no key; X posts need an AISA_API_KEY and are off by default.
 ---
 
 # AI listening
@@ -10,12 +10,12 @@ Produce one report: the names of new AI models, products and repositories seen i
 ## Before you run anything
 
 1. Find the radar. Use `$NEW_TERM_RADAR_DIR` if set, else `~/new-term-radar`. If neither exists, clone it: `git clone https://github.com/zhuyansen/new-term-radar ~/new-term-radar`. Run every command from that directory. Python 3.10 or newer; no packages to install.
-2. Check an AIsa key is available: `AISA_API_KEY`, or the AIsa CLI logged in (`ls ~/.aisa/key`). Without one only the free signals run (Hugging Face, GitHub, sitemaps), no X posts are read, and nothing judges which terms are names. Say so in the report. A key comes from https://go.aisa.one/yansen-zhu.
-3. If there is no `config.json`, copy `config.example.json` to `config.json`. Tell the user they are on the example list of X accounts and sitemaps and can edit it.
+2. No key is required. The free signals are Hugging Face, GitHub and sitemaps, and a local heuristic judges which terms are names. `AISA_API_KEY` (or the AIsa CLI key in `~/.aisa`) only adds X posts, and the example config leaves `x_accounts` empty so X is skipped. Say that in the report when there is no key. A key comes from https://go.aisa.one/yansen-zhu.
+3. If there is no `config.json`, the command reads `config.example.json`. Tell the user they are on the example sitemaps and can copy the file to edit it.
 
 ## Cost and time, say this first
 
-A run reads every X account in `config.json`: about 0.003 USD and 10 seconds each, so the example list of 35 accounts is about 0.11 USD and 6 minutes. Tell the user the estimate before you start, and do not run it twice in a row: the second run reports only what changed since the first.
+The free run costs nothing and takes a few minutes, mostly on sitemap fetches. Tell the user that, and do not run it twice in a row: the second run reports only what changed since the first. X is off unless `x_accounts` is filled and `AISA_API_KEY` is set.
 
 ## Run
 
@@ -23,7 +23,7 @@ A run reads every X account in `config.json`: about 0.003 USD and 10 seconds eac
 python -m radar daily --skip usecases,review,newsites --out listening.md
 ```
 
-This reads X, Hugging Face, GitHub breakouts and the sitemaps, merges terms seen by several signals, and scores each as a name or a common word. It writes `listening.md` and `listening.json`.
+This reads Hugging Face, GitHub breakouts and the sitemaps (X only when accounts and an AISA_API_KEY are set), merges terms seen by several signals, and scores each as a name or a common word with the local judge. It writes `listening.md` and `listening.json`.
 
 The first run on a machine only builds snapshots (yesterday's X vocabulary, star counts, sitemap URLs do not exist yet), so it reports GitHub breakouts and little else. Say this plainly instead of presenting a thin report as a quiet day. From the second run on, every signal reports what is new.
 

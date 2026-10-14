@@ -101,6 +101,8 @@ T = {
     "hit_cols": ("| Signal | Reviewed | Hits | Hit rate | Median days ahead |", "| 信号 | 复盘 | 命中 | 命中率 | 提前天数中位数 |"),
     "status_h": ("### Data status", "### 数据状态"),
     "st_x": ("- ① X: {state}", "- ① X:{state}"), "st_hf": ("- ① HF: {state}", "- ① HF:{state}"),
+    "x_nokey_short": ("off, no AISA_API_KEY (the free signals do not need one)",
+                      "关闭,没有 AISA_API_KEY(免费信号不需要它)"),
     "st_x_ok": ("{answered}/{accounts} accounts, {posts} posts", "{answered}/{accounts} 个账号,{posts} 条帖子"),
     "st_x_first": (", first run: vocabulary built, nothing reported", ",首次运行,只建词表"),
     "st_hf_ok": ("{models} trending models, {spaces} trending Spaces", "trending {models} 个模型、{spaces} 个 Space"),
