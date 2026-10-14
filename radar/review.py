@@ -92,6 +92,8 @@ def plan_calls(due: list[tuple], today: date, after_days: int = 14) -> tuple[lis
 def review(cfg: dict, conn: sqlite3.Connection, today: date | None = None) -> dict:
     today = today or date.today()
     c = cfg["review"]
+    if not c.get("per_day"):
+        return {"skipped": True, "checked": [], "cost_micros": 0, "after_days": c["after_days"]}
     due = store.due(conn, today, c["after_days"], c["per_day"])
     if not due:
         return {"checked": [], "cost_micros": 0, "after_days": c["after_days"]}

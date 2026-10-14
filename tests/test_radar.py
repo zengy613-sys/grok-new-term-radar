@@ -229,6 +229,105 @@ def test_judge_failure_leaves_rows_unscored(monkeypatch):
     assert "error" in judge.score(rows, "m") and "named" not in rows[0]
 
 
+def test_local_judge_drops_stop_words_known_terms_common_words_and_long_finetunes(monkeypatch):
+    def chat(*a):
+        raise AssertionError("the local judge must not call a model")
+    monkeypatch.setattr(judge.aisa, "chat", chat)
+    rows = [
+        {"term": "strata"},
+        {"term": "krea 2"},
+        {"term": "claude opus 5.5"},
+        {"term": "claude code"},                 # stop words only
+        {"term": "dashboard"},                   # a common word
+        {"term": "video generator"},
+        {"term": "hyperframes", "known": "hyperframes"},
+        {"term": "qwen image 2.1 uncensored gguf"},
+        {"term": "llama 3.1 8b instruct lora q4"},
+    ]
+    assert judge.score(rows, "local") == {"judged": len(rows), "local": True}
+    scores = {r["term"]: r["named"] for r in rows}
+    assert scores["strata"] >= 0.5 and scores["krea 2"] >= 0.5 and scores["claude opus 5.5"] >= 0.5
+    assert scores["claude code"] < 0.5 and scores["dashboard"] < 0.5 and scores["video generator"] < 0.5
+    assert scores["hyperframes"] < 0.5
+    assert scores["qwen image 2.1 uncensored gguf"] < 0.5
+    assert scores["llama 3.1 8b instruct lora q4"] < 0.5
+    assert judge.score([{"term": "strata"}], "") == {"judged": 0, "skipped": True}
+
+
+def test_x_without_a_key_is_skipped(tmp_path, monkeypatch):
+    import radar.sources as sources
+    monkeypatch.delenv("AISA_API_KEY", raising=False)
+    monkeypatch.setattr(sources.aisa, "key", lambda: (_ for _ in ()).throw(sources.aisa.AisaError("no AIsa key")))
+    out = sources.x_new({"x_accounts": {"labs": ["openai"], "bloggers": []}}, tmp_path)
+    assert out == {"skipped": True, "no_key": True}
+
+
+def test_missing_config_falls_back_to_the_example(tmp_path, monkeypatch):
+    example = tmp_path / "config.example.json"
+    example.write_text(json.dumps({"lang": "en", "known_terms": ["remotion"], "sitemaps": {
+        "toolify": {"index": "https://www.toolify.ai/sitemap.xml"}}}))
+    monkeypatch.chdir(tmp_path)
+    cfg = config.load(Path("config.json"))
+    assert cfg["sitemaps"]["toolify"]["index"].startswith("https://www.toolify.ai/")
+    assert cfg["known_terms"] == ["remotion"]
+    assert cfg["judge"]["model"] == "local"
+    assert cfg["usecases"]["per_day"] == 0 and cfg["review"]["per_day"] == 0
+    assert cfg["new_sites"]["weekday"] == -1 and cfg["revenue"]["weekday"] == -1
+
+
+def test_shipped_example_is_the_free_monitor():
+    root = Path(__file__).resolve().parents[1]
+    cfg = config.load(root / "config.example.json")
+    wanted = {"toolify", "ai-bot.cn", "futurepedia", "aixploria", "opentools", "dang", "clipfly",
+              "aitoptools", "glama", "mcp.so", "lobehub-mcp", "lobehub-skills"}
+    assert wanted <= set(cfg["sitemaps"])
+    assert cfg["x_accounts"] == {"labs": [], "bloggers": []}
+    assert cfg["judge"]["model"] == "local"
+    assert cfg["usecases"]["per_day"] == 0 and cfg["review"]["per_day"] == 0
+    assert cfg["new_sites"]["weekday"] == -1 and cfg["revenue"]["weekday"] == -1 and cfg["asks"]["weekday"] == -1
+    assert cfg["tutorials"]["max_leads"] == 0
+    text = (root / ".github/workflows/radar.yml").read_text()
+    assert "RADAR_ENABLED" in text and "github.token" in text and "actions/cache" in text
+    assert "GITHUB_STEP_SUMMARY" in text and "upload-artifact" in text
+    assert "python -m radar daily" in text and "AISA_API_KEY" not in text
+
+
+def test_free_daily_runs_with_no_paid_keys(tmp_path, monkeypatch):
+    root = Path(__file__).resolve().parents[1]
+    monkeypatch.chdir(root)
+    for name in ("AISA_API_KEY", "GOANYAPI_API_KEY", "TRUSTMRR_API_KEY", "RESEND_API_KEY"):
+        monkeypatch.delenv(name, raising=False)
+    monkeypatch.setattr(cli.sources, "hf_new", lambda cfg, state: {
+        "models": 2, "spaces": 1, "first_run": False, "terms": [
+            {"term": "krea 2", "recent": 1, "note": "Hugging Face: new at #1", "examples": ["krea/Krea-2"]}]})
+    monkeypatch.setattr(cli.breakout, "breakouts", lambda cfg, state: {
+        "searched": 4, "first_run": False, "terms": [], "repos": []})
+    monkeypatch.setattr(cli.sitemaps, "diff", lambda cfg, state: {
+        "sites": {"toolify": {"urls": 12, "new": 2, "first_run": False}},
+        "terms": [{"term": "dashboard", "recent": 4, "lift": 3.0, "examples": ["https://www.toolify.ai/dashboard"]}]})
+
+    def paid(*a, **k):
+        raise AssertionError("a paid signal ran")
+    monkeypatch.setattr(cli.new_sites, "new_sites", paid)
+    monkeypatch.setattr(cli.revenue, "products", paid)
+    monkeypatch.setattr(cli.asks, "asks", paid)
+    monkeypatch.setattr(cli.usecases, "run", paid)
+    monkeypatch.setattr(cli.review, "review", paid)
+    monkeypatch.setattr(cli.pains, "tutorial_asks", paid)
+
+    out = tmp_path / "report.md"
+    assert cli.main(["daily", "--state", str(tmp_path / "state"), "--out", str(out)]) == 0
+    text = out.read_text()
+    data = json.loads(out.with_suffix(".json").read_text())
+    assert "**krea 2**" in text and "dashboard" in text and "**dashboard**" not in text
+    assert "AisaError" not in text and "no network" not in text
+    for key in ("newsite", "revenue", "ask"):
+        assert data[key].get("skipped") and "error" not in data[key]
+    assert data["keywords"].get("skipped") and "error" not in data["keywords"]
+    assert data["review"].get("skipped") and "error" not in data["review"]
+    assert data["x"].get("skipped") and "error" not in data["x"]
+
+
 # --- merging the signals ---------------------------------------------------------------------
 
 def _no_judge(monkeypatch):

@@ -1,7 +1,9 @@
-"""config.json: what to watch. Copy config.example.json and edit it.
+"""config.json: what to watch. If config.json is missing, config.example.json is used.
 
-Everything has a default except the X accounts and the sitemaps, which only you can
-choose. Secrets are never read from this file; they come from the environment.
+The defaults are the free monitor: Hugging Face, GitHub breakouts and the sitemaps in the
+example file run with no key. Paid signals stay off (usecases and review per_day 0, weekly
+signals on weekday -1, which never matches) until you opt in. Secrets are never read from
+this file; they come from the environment.
 """
 from __future__ import annotations
 
@@ -17,16 +19,16 @@ DEFAULTS = {
     "topics": {},
     "known_terms": [],
     "stop_words": [],
-    "judge": {"model": "gpt-4.1-mini", "min_score": 0.5},
+    "judge": {"model": "local", "min_score": 0.5},
     "breakout": {"window_days": 14, "min_stars": 300, "velocity_min": 200, "delta_min": 400},
-    "new_sites": {"queries": {"ai": "%ai%"}, "weekday": 0, "window_days": 90, "min_etv": 1000, "min_keywords": 20},
-    "review": {"after_days": 14, "per_day": 5},
-    "usecases": {"per_day": 5, "model": "claude-sonnet-4-6", "min_volume": 50, "trends_max": 10, "recheck_days": 3,
+    "new_sites": {"queries": {"ai": "%ai%"}, "weekday": -1, "window_days": 90, "min_etv": 1000, "min_keywords": 20},
+    "review": {"after_days": 14, "per_day": 0},
+    "usecases": {"per_day": 0, "model": "claude-sonnet-4-6", "min_volume": 50, "trends_max": 10, "recheck_days": 3,
                  "location_code": 2840, "benchmark": "gpts", "min_daily": 300, "related": True, "related_geo": "US",
                  "country_trends": True, "country_min_volume": 1000, "country_max": 8},
     "competition": {"max_rows": 8, "weak_dr": 30, "location_code": 2840},
-    "revenue": {"weekday": 0, "pages_growth": 3, "pages_new": 3, "min_revenue_usd": 500, "category": "", "max_leads": 10},
-    "asks": {"weekday": 0, "time": "week", "min_score": 2, "model": "gpt-4.1-mini", "min_volume": 50, "max_leads": 12,
+    "revenue": {"weekday": -1, "pages_growth": 3, "pages_new": 3, "min_revenue_usd": 500, "category": "", "max_leads": 10},
+    "asks": {"weekday": -1, "time": "week", "min_score": 2, "model": "gpt-4.1-mini", "min_volume": 50, "max_leads": 12,
              "location_code": 2840, "patterns": [
                  '"is there an ai tool"', '"is there an ai that"', '"is there a tool that"', '"any ai tool for"',
                  '"looking for an ai tool"', '"i wish there was a tool"', '"is there a way to automatically"',
@@ -34,12 +36,18 @@ DEFAULTS = {
                  '"ai tool that can"']},
     "pains": {"model": "gpt-4.1-mini", "extensions": 5, "review_pages": 2, "max_stars": 3, "reddit_time": "year", "videos": 3,
               "reddit_queries": ["{k} alternative", "{k} frustrating", '"{k}" "doesn\'t work"', "{k} wish there was"]},
-    "tutorials": {"max_leads": 3, "videos": 3, "model": "gpt-4.1-mini"},
+    "tutorials": {"max_leads": 0, "videos": 3, "model": "gpt-4.1-mini"},
     "gsc": {},
 }
 
 
 def load(path: Path) -> dict:
+    path = Path(path)
+    # The free daily command works from a fresh clone: no config.json required.
+    if not path.exists() and path.name == "config.json":
+        example = path.with_name("config.example.json")
+        if example.exists():
+            path = example
     if not path.exists():
         raise SystemExit(f"{path} not found: copy config.example.json to {path.name} and edit it")
     raw = json.loads(path.read_text())

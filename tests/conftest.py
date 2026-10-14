@@ -28,4 +28,10 @@ def cfg(tmp_path):
     c = copy.deepcopy(config.DEFAULTS)
     c["_dir"] = tmp_path
     c["competition"]["max_rows"] = 0     # the page-one check runs only in the tests that set it up
+    # Shipped defaults leave the paid paths off. These tests exercise them.
+    c["review"]["per_day"] = 5
+    c["usecases"]["per_day"] = 5
+    c["judge"]["model"] = "gpt-4.1-mini"
+    c["new_sites"]["weekday"] = 0
+    c["revenue"]["weekday"] = 0
     return c
