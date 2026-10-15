@@ -14,7 +14,8 @@ name: New-term radar
 
 on:
   schedule:
-    - cron: "30 1 * * *"
+    # 06:00 Asia/Shanghai (UTC+8). GitHub cron is UTC, so this is 22:00 UTC.
+    - cron: "0 22 * * *"
   workflow_dispatch:
 
 concurrency:
