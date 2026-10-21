@@ -7,6 +7,22 @@
       "exclude_locale_prefixes": true,
       "note": "AI 图片/视频/音乐/语音大站；sitemap 的 lastmod 是统一的构建时间，所以只比对 URL 新增和删除",
       "added": "2026-10-21"
+    },
+    {
+      "name": "Pixomi",
+      "domain": "pixomi.ai",
+      "sitemap": "https://pixomi.ai/sitemap.xml",
+      "exclude_locale_prefixes": true,
+      "note": "sitemap 是索引（static + 多个 landing 子 sitemap）",
+      "added": "2026-10-21"
+    },
+    {
+      "name": "Kimg",
+      "domain": "kimg.ai",
+      "sitemap": "https://kimg.ai/sitemap.xml",
+      "exclude_locale_prefixes": true,
+      "note": "lastmod 为统一构建时间，只比对 URL",
+      "added": "2026-10-21"
     }
   ]
 }
