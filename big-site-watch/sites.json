@@ -1,0 +1,12 @@
+{
+  "sites": [
+    {
+      "name": "SuperMaker",
+      "domain": "supermaker.ai",
+      "sitemap": "https://supermaker.ai/sitemap.xml",
+      "exclude_locale_prefixes": true,
+      "note": "AI 图片/视频/音乐/语音大站；sitemap 的 lastmod 是统一的构建时间，所以只比对 URL 新增和删除",
+      "added": "2026-10-21"
+    }
+  ]
+}
