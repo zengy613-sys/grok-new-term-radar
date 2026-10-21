@@ -23,6 +23,7 @@
 2. 读当天报告，挑 4–6 条最值得导航站收录的新工具/新模型/新词，优先 AI 图片和视频。
 3. 跳过 NSFW、站点地图杂项、前几天和 09:52 提醒里发过的。每条附链接和上站理由。
 4. 失败时报告卡在哪一步和 .log 关键报错。
+5. .md 报告里图片/视频条目少时，去同名 .json 的 `sitemap.sites.*.sample` 看各导航站新收录的 URL（dang、aitoptools、glama 常有新视频工具），必要时打开页面确认再推荐。
 
 ## 2. AI 生成玩法简报
 1. X 上搜过去 24 小时（周一含周末）的图片/视频生成新玩法、新模型、提示词技巧、TikTok 爆款 AI 内容。
@@ -51,3 +52,4 @@
 - 2026-10-21：站长监听首跑发现 "Credits back if a render fails" 被无关站（popstarai.video、iwannaloveyouai.video）共用，已从强指纹降为中。
 - 2026-10-21：梗视频站的新梗词可以参考 Know Your Meme 本周热门；跟风站多（≥5 个）的梗适合在导航站做"梗视频生成器"合集。
 - 2026-10-21：深挖 popstarai.video 时最有用的线索是导航站的投稿人主页：Startup Fame 站点页上的 rel="author" 链接直接列出同一账号的 18 个站。之后用"`p.<域名>` 自建 Plausible + Zoho MX + 固定 Cloudflare NS 对"三件套批量核对，再顺着页脚友链和"共用支持邮箱的同页面站"（z-image-ai.com 写着 support@gptimage-2.com）把另外两个 CF 账号连了进来。注意友链里也有别的团队（飞书邮箱 + GA 那一伙），不能见链接就算。
+- 2026-10-22：雷达 .md 的候选词表偏文本模型/GitHub，今天 4 条图片视频推荐全部来自 .json 里 sitemap 的新 URL 样本（Seedance 3.0、ManyMotions、aiMakeVideo、AIRAP）；toolify 的 sitemap 读不到 URL，待查。ai-bot.cn 一次冒出 681 个"新"URL 多是老条目重新进 sitemap，别当新货。
