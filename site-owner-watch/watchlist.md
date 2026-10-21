@@ -10,7 +10,8 @@
 - https://ozilgoalaigenerator.com/ ，2026-10-14 注册，厄齐尔进球梗视频，$8.90/$18.90/$28.90
 
 ### 指纹
-- 强：文案 "Photo deleted once your video is made"、"Credits back if a render fails"、"which is why the photo box is empty when you come back"；条款写 "independent tool"
+- 强：文案 "Photo deleted once your video is made"、"which is why the photo box is empty when you come back"；条款写 "independent tool"
+- 中：文案 "Credits back if a render fails"（2026-10-21 发现无关站 popstarai.video、iwannaloveyouai.video 也在用，已从强降为中）
 - 强：素材路径 r2.<域名>/site/<梗名>/，图标 /brand/mark.svg，接口 /api/meme/generate
 - 中：ShipAny 模板（shipanyai/shipany-template-two + better-auth），首页 JS 文件哈希大量相同；部署在 Vercel
 - 中：GA ID G-ZFD4YV344W（公开反查暂无结果）
