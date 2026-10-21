@@ -50,3 +50,4 @@
 - 2026-10-21：supermaker.ai、kimg.ai 的 sitemap lastmod 全是同一构建时间，只能比 URL 集合；pixomi.ai 用 sitemap 索引（static + 多个 landing 子文件）。
 - 2026-10-21：站长监听首跑发现 "Credits back if a render fails" 被无关站（popstarai.video、iwannaloveyouai.video）共用，已从强指纹降为中。
 - 2026-10-21：梗视频站的新梗词可以参考 Know Your Meme 本周热门；跟风站多（≥5 个）的梗适合在导航站做"梗视频生成器"合集。
+- 2026-10-21：深挖 popstarai.video 时最有用的线索是导航站的投稿人主页：Startup Fame 站点页上的 rel="author" 链接直接列出同一账号的 18 个站。之后用"`p.<域名>` 自建 Plausible + Zoho MX + 固定 Cloudflare NS 对"三件套批量核对，再顺着页脚友链和"共用支持邮箱的同页面站"（z-image-ai.com 写着 support@gptimage-2.com）把另外两个 CF 账号连了进来。注意友链里也有别的团队（飞书邮箱 + GA 那一伙），不能见链接就算。
