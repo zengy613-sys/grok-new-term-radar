@@ -10,7 +10,8 @@
 - https://ozilgoalaigenerator.com/ ，2026-10-14 注册，厄齐尔进球梗视频，$8.90/$18.90/$28.90
 
 ### 指纹
-- 强：文案 "Photo deleted once your video is made"、"which is why the photo box is empty when you come back"；条款写 "independent tool"
+- 强：文案 "Photo deleted once your video is made"、"which is why the photo box is empty when you come back"
+- 弱：条款写 "independent tool"（2026-10-22 发现无关站 burningbridgesai.app、unforgettablecar.com 页脚也写 "independent tool, not affiliated with…"，已从强降为弱）
 - 中：文案 "Credits back if a render fails"（2026-10-21 发现无关站 popstarai.video、iwannaloveyouai.video 也在用，已从强降为中）
 - 强：素材路径 r2.<域名>/site/<梗名>/，图标 /brand/mark.svg，接口 /api/meme/generate
 - 中：ShipAny 模板（shipanyai/shipany-template-two + better-auth），首页 JS 文件哈希大量相同；部署在 Vercel
@@ -19,7 +20,7 @@
 - 弱：邮箱 support@<域名>（Cloudflare 邮件转发）
 
 ### 监听手段
-1. 网页 / X 搜上面的标志性文案
+1. 网页 / X 搜上面的标志性文案（网页搜 "Photo deleted once your video is made" 和 "photo box is empty" 最好用，直接返回他的站）
 2. 证书透明日志查新域名：certspotter 可用；crt.sh 有限流
 3. 当下 TikTok / X 新梗词 + "ai generator" / "ai video" 的新注册精确匹配域名，打开后对指纹
 4. 候选站至少匹配 1 条强指纹才算"确认"，只匹配中/弱的算"疑似"

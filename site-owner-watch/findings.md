@@ -52,3 +52,10 @@
 | 2025-12-16 | gptimage1-5.app | GPT Image 1.5（站打不开） | 只有 DNS：Zoho；jason/margot | 低 |
 
 排除：iwannaloveyouai.video（Vite 栈、CF 邮件转发、NS casey/jillian、第三方 Plausible，不是同一人）；sam-3d.com 等友链里的 seedream*/vo4ai*/trellis*/copilot3d/happyhorse20/kling-3/tryveo4ai/flux-2-ai/nanobanana-pro.app（飞书邮箱 + 各自 GA，另一伙人，只是互换友链）；huntifyai/acidtools/productwing/promoteproject（导航站）。
+
+### 2026-10-22 例行检查
+未发现新站（#1、#2 都没有）。
+- #1：网页搜两句标志性文案，只返回已记录的 dimedimebaby.app、ozilgoalaigenerator.com。
+- #2：Startup Fame 账号 catalinagarciasimon639 仍是 18 个站，无新增；roadsterai.video、popstarai.video、bulin47ai.video、z-video.co、minih3.pro 页脚外链没有冒出新域名。
+- 新梗词拼域名：用 imageat 10 月 TikTok AI 趋势表 + 近几天的梗（Closed on Sunday、Drake Burning Bridges、Jean Phil Dance、Unforgettable Car 24、Zombie Couple、Female Malfoy、Lamine Yamal、Connor Price、Vampire Duo、Mummy Zombie、Witchcore、Bati Bati、Tung Tung Sahur 等）× .app / aigenerator.com / ai.video / ai.com / .com / ai.app / aivideo.com / .video，查到约 35 个在线的跟风站（Burning Bridges 一个词就有 10+ 个站）。逐个核对：都没有 #1 的两句强文案、/brand/mark.svg、/api/meme/generate、r2.<域名>/site/、G-ZFD4YV344W，NS 也不是 martha/rajeev；都没有 #2 的 p.<域名> Plausible、Zoho MX、studio-console、harvey/kira·alex/tia·jason/margot。结论：都是别的站长。
+- 指纹降级：burningbridgesai.app、unforgettablecar.com 页脚也写 "independent tool, not affiliated with…"，#1 的 "independent tool" 从强降为弱。
