@@ -397,6 +397,7 @@ https://supermaker.ai/image/draw-to-image
 https://supermaker.ai/image/f1-ai-photo-generator
 https://supermaker.ai/image/face-in-hole-generator
 https://supermaker.ai/image/face-score-filter
+https://supermaker.ai/image/female-malfoy-ai
 https://supermaker.ai/image/flashlight-ai-photo
 https://supermaker.ai/image/flux-2-klein
 https://supermaker.ai/image/flux-3-image
@@ -416,6 +417,7 @@ https://supermaker.ai/image/gpt-image-2-5
 https://supermaker.ai/image/gpt-transparent-background-generator
 https://supermaker.ai/image/green-screen-remover
 https://supermaker.ai/image/gta-art-image-generator
+https://supermaker.ai/image/gta-style-ai-generator
 https://supermaker.ai/image/hunyuan-image-3-0
 https://supermaker.ai/image/ideogram-4-5
 https://supermaker.ai/image/image-background-remover
@@ -572,6 +574,7 @@ https://supermaker.ai/video/ai-ghibli-video-generator
 https://supermaker.ai/video/ai-gif-generator
 https://supermaker.ai/video/ai-hair-color-change
 https://supermaker.ai/video/ai-hair-growth
+https://supermaker.ai/video/ai-halloween-costume-transformation
 https://supermaker.ai/video/ai-happy-smile
 https://supermaker.ai/video/ai-hip-shake
 https://supermaker.ai/video/ai-horse-riding
@@ -696,6 +699,7 @@ https://supermaker.ai/video/morph-skin-video-effect
 https://supermaker.ai/video/multi-shot-video-generator
 https://supermaker.ai/video/multiple-me-effect
 https://supermaker.ai/video/neon-duo-dance
+https://supermaker.ai/video/ozil-goal-ai
 https://supermaker.ai/video/pdf-to-video-converter
 https://supermaker.ai/video/photo-to-dance
 https://supermaker.ai/video/pixverse-v6
