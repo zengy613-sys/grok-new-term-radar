@@ -35,6 +35,7 @@
 1. 看主流导航站最近 24 小时新收录或热度上升的工具；X 上搜新发布、热议的工具和新词。
 2. 和之前提醒、当天雷达日报去重。
 3. 推荐 5–10 个上站工具（每个一句话 + 官网或来源链接）、列新关键词，结尾督促上站。
+4. 最好用的来源是 TAAFT 的 `https://theresanaiforthat.com/just-released/`（WebFetch 能读，带发布时间和趋势排名）；Product Hunt 的 AI 话题页只有老牌产品，没有每日新品。X 上用「launch/introducing + AI video/video model」按 relevancy 搜，最容易抓到新模型名。
 
 ## 4. 大站内页更新监听
 1. `git pull` 后跑 `python3 big-site-watch/check.py`：抓 `sites.json` 里每个站的 sitemap（支持 sitemap 索引和 .gz），去掉 /zh/、/ja/ 等多语言重复页，和 `snapshots/<域名>.txt` 比对。
@@ -55,3 +56,4 @@
 - 2026-10-21：深挖 popstarai.video 时最有用的线索是导航站的投稿人主页：Startup Fame 站点页上的 rel="author" 链接直接列出同一账号的 18 个站。之后用"`p.<域名>` 自建 Plausible + Zoho MX + 固定 Cloudflare NS 对"三件套批量核对，再顺着页脚友链和"共用支持邮箱的同页面站"（z-image-ai.com 写着 support@gptimage-2.com）把另外两个 CF 账号连了进来。注意友链里也有别的团队（飞书邮箱 + GA 那一伙），不能见链接就算。
 - 2026-10-22：雷达 .md 的候选词表偏文本模型/GitHub，今天 4 条图片视频推荐全部来自 .json 里 sitemap 的新 URL 样本（Seedance 3.0、ManyMotions、aiMakeVideo、AIRAP）；toolify 的 sitemap 读不到 URL，待查。ai-bot.cn 一次冒出 681 个"新"URL 多是老条目重新进 sitemap，别当新货。
 - 2026-10-22：X 搜索的 min_faves 过滤无效（API 直接删掉），玩法简报改为 relevancy 排序 + 看收藏/浏览量人工筛；中文搜「提示词/玩法 + 豆包/Seedance」比英文搜更容易出可复用技巧。
+- 2026-10-22：导航站提醒里，TAAFT 单个工具页（`/ai/<slug>/`）从盒子 curl 会 403，没有官网域名的工具先链到 TAAFT just-released 列表页；Product Hunt AI 话题页没有当日新品，别指望它。今天的新模型词（Topview T1、VideoGen Model 1）都来自 X 的发布帖。
