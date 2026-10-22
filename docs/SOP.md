@@ -29,6 +29,7 @@
 1. X 上搜过去 24 小时（周一含周末）的图片/视频生成新玩法、新模型、提示词技巧、TikTok 爆款 AI 内容。
 2. 优先互动高、有可复用方法或示例的帖子；去广告、去重。
 3. 按「图片生成 / 视频生成 / TikTok 内容技巧」分组，每条一两句加原帖链接。
+4. X 搜索 API 不支持 min_faves，会被自动去掉；用 sort_order=relevancy 并自己看 public_metrics（收藏数、浏览量）筛，名人仿妆类 Nano Banana 提示词帖互动高但不算玩法，跳过。
 
 ## 3. 导航站上新与新词提醒
 1. 看主流导航站最近 24 小时新收录或热度上升的工具；X 上搜新发布、热议的工具和新词。
@@ -53,3 +54,4 @@
 - 2026-10-21：梗视频站的新梗词可以参考 Know Your Meme 本周热门；跟风站多（≥5 个）的梗适合在导航站做"梗视频生成器"合集。
 - 2026-10-21：深挖 popstarai.video 时最有用的线索是导航站的投稿人主页：Startup Fame 站点页上的 rel="author" 链接直接列出同一账号的 18 个站。之后用"`p.<域名>` 自建 Plausible + Zoho MX + 固定 Cloudflare NS 对"三件套批量核对，再顺着页脚友链和"共用支持邮箱的同页面站"（z-image-ai.com 写着 support@gptimage-2.com）把另外两个 CF 账号连了进来。注意友链里也有别的团队（飞书邮箱 + GA 那一伙），不能见链接就算。
 - 2026-10-22：雷达 .md 的候选词表偏文本模型/GitHub，今天 4 条图片视频推荐全部来自 .json 里 sitemap 的新 URL 样本（Seedance 3.0、ManyMotions、aiMakeVideo、AIRAP）；toolify 的 sitemap 读不到 URL，待查。ai-bot.cn 一次冒出 681 个"新"URL 多是老条目重新进 sitemap，别当新货。
+- 2026-10-22：X 搜索的 min_faves 过滤无效（API 直接删掉），玩法简报改为 relevancy 排序 + 看收藏/浏览量人工筛；中文搜「提示词/玩法 + 豆包/Seedance」比英文搜更容易出可复用技巧。
