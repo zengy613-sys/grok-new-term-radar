@@ -59,3 +59,4 @@
 - 2026-10-22：导航站提醒里，TAAFT 单个工具页（`/ai/<slug>/`）从盒子 curl 会 403，没有官网域名的工具先链到 TAAFT just-released 列表页；Product Hunt AI 话题页没有当日新品，别指望它。今天的新模型词（Topview T1、VideoGen Model 1）都来自 X 的发布帖。
 - 2026-10-22：大站内页监听首次正式比对，supermaker.ai 一天上 4 页，全是梗/节日词（Female Malfoy、GTA 风、万圣节换装、厄齐尔进球）；从盒子 curl 页面 `<title>` 和 meta description 就能确认新词，不用开浏览器。
 - 2026-10-22：站长监听拼梗名域名时，imageat.com/tiktok-ai-trends（每月 TikTok AI 趋势表）是好用的梗词来源；用 dns.google 的 DoH 接口批量查 NS/MX 比 dig 方便（盒子上没有 dig）。抓页面要加 `--compressed`，grep 加 `-a`，不然很多页面被当成二进制漏判。"independent tool" 这类免责声明句很多跟风站都写，不能当强指纹。
+- 2026-10-23：雷达 .md「AI video」专题又是空的，候选词仍偏文本/GitHub；图片视频仍靠 .json sitemap sample（dang 全量新 3 条、aitoptools 全量新 4 条、ai-bot.cn 只给 new[:8]）。ai-bot.cn 再次冒出 689「新」URL，只跟样本里当天页（BaoCut 等），其余按 10-22 经验当重刷。dang/aitoptools 的成人向工具（DeepSwapFace 列表图带 nsfw、CelebMakerAI 自述 porn）直接跳过。snapshot 跑完就被覆盖，当天若要挖 ai-bot 全量 new，得在 run 结束立刻从 sample/new 另存，否则只剩 sample 8 条。
