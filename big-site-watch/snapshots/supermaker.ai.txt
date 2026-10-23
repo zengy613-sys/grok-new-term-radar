@@ -78,6 +78,7 @@ https://supermaker.ai/blog/how-to-make-photo-cinematic-with-ai-complete-guide-us
 https://supermaker.ai/blog/how-to-make-smalltown-boy-ai-trend-video
 https://supermaker.ai/blog/how-to-make-storm-ii-ai-video
 https://supermaker.ai/blog/how-to-make-the-viral-choose-your-bed-videos-with-ai
+https://supermaker.ai/blog/how-to-make-victoria-secret-ai-video
 https://supermaker.ai/blog/how-to-make-viral-ai-rap-duo-trend-video
 https://supermaker.ai/blog/how-to-make-your-own-funko-pop
 https://supermaker.ai/blog/how-to-prank-my-parents-with-ai-jesus-showed-up-at-home-ai-jesus-prank
@@ -364,6 +365,7 @@ https://supermaker.ai/image/ai-wool-photo
 https://supermaker.ai/image/ai-wrinkle-remover
 https://supermaker.ai/image/ai-yarn-filter
 https://supermaker.ai/image/ai-zootopia
+https://supermaker.ai/image/anime-eye-trend
 https://supermaker.ai/image/bangs-filter
 https://supermaker.ai/image/birth-flower-tattoo-generator
 https://supermaker.ai/image/black-and-white-filter
@@ -468,6 +470,7 @@ https://supermaker.ai/image/pie-chart-generator
 https://supermaker.ai/image/pixar-ai-generator
 https://supermaker.ai/image/pixel-art-generator
 https://supermaker.ai/image/pose-reference-ai
+https://supermaker.ai/image/pumpkin-head-photoshoot
 https://supermaker.ai/image/qwen-2-1-turbo
 https://supermaker.ai/image/qwen-image-2-1
 https://supermaker.ai/image/qwen-image-3-0
@@ -488,6 +491,7 @@ https://supermaker.ai/image/seedream-ai
 https://supermaker.ai/image/sepia-filter
 https://supermaker.ai/image/silhouette-maker
 https://supermaker.ai/image/snoopy-ai-filter
+https://supermaker.ai/image/sorry-i-lied-ai
 https://supermaker.ai/image/south-park-character-creator
 https://supermaker.ai/image/sprunki-oc-maker
 https://supermaker.ai/image/stick-people-effect
@@ -600,6 +604,7 @@ https://supermaker.ai/video/ai-piggyback-video
 https://supermaker.ai/video/ai-pixel-video-generator
 https://supermaker.ai/video/ai-pop-dance
 https://supermaker.ai/video/ai-private-helicopter-video-generator
+https://supermaker.ai/video/ai-prompt-generator
 https://supermaker.ai/video/ai-rap-duo
 https://supermaker.ai/video/ai-red-carpet-video
 https://supermaker.ai/video/ai-running-video
@@ -650,6 +655,7 @@ https://supermaker.ai/video/burning-bridges-ai-video-generator
 https://supermaker.ai/video/carpool-karaoke-ai-video
 https://supermaker.ai/video/cartoon-to-video
 https://supermaker.ai/video/cat-eating-food
+https://supermaker.ai/video/charme-dance-ai
 https://supermaker.ai/video/christmas-snow-globe-filter
 https://supermaker.ai/video/crazy-frog-ai
 https://supermaker.ai/video/day-to-night
@@ -671,6 +677,7 @@ https://supermaker.ai/video/happyhorse-1-0
 https://supermaker.ai/video/happyhorse-1-1
 https://supermaker.ai/video/harry-potter-magic-broom
 https://supermaker.ai/video/hotel-lobby-ai
+https://supermaker.ai/video/hug-in-heaven
 https://supermaker.ai/video/human-to-animal
 https://supermaker.ai/video/image-to-video
 https://supermaker.ai/video/into-the-mouth
@@ -703,6 +710,8 @@ https://supermaker.ai/video/ozil-goal-ai
 https://supermaker.ai/video/pdf-to-video-converter
 https://supermaker.ai/video/photo-to-dance
 https://supermaker.ai/video/pixverse-v6
+https://supermaker.ai/video/pixverse-v6-max
+https://supermaker.ai/video/plug-walk-filter
 https://supermaker.ai/video/rumpelstiltskin-ai-dance-video
 https://supermaker.ai/video/seedance-1-5-pro
 https://supermaker.ai/video/seedance-2-0

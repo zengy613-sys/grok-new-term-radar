@@ -438,6 +438,7 @@ https://pixomi.ai/image/fix-photo-lighting
 https://pixomi.ai/image/flashlight-ai-photo
 https://pixomi.ai/image/flat-illustration-generator
 https://pixomi.ai/image/flux-3-image
+https://pixomi.ai/image/flux-3-klein
 https://pixomi.ai/image/flux-ai-image-generator
 https://pixomi.ai/image/font-stylizer-generator
 https://pixomi.ai/image/formal-attire-editor
@@ -637,6 +638,7 @@ https://pixomi.ai/video/ai-laughing-face-effect
 https://pixomi.ai/video/ai-lip-sync-generator
 https://pixomi.ai/video/ai-motion-control
 https://pixomi.ai/video/ai-photo-booth-video
+https://pixomi.ai/video/ai-prompt-generator
 https://pixomi.ai/video/ai-red-carpet-video
 https://pixomi.ai/video/ai-shibuya-crossing-video
 https://pixomi.ai/video/ai-spokesperson-generator
