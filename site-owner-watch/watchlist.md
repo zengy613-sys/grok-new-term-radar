@@ -43,7 +43,8 @@
 - 强：统计用 Plausible 反代子域 `p.<域名>/js/script.file-downloads[.hash].outbound-links.pageview-props.revenue.tagged-events.js`（脚本字节与 plausible.zhelogic.com 完全相同，和 plausible.io 官方版不同）
 - 强：Startup Fame 投稿账号 catalinagarciasimon639 / "Joaquin Garcia"
 - 强：站与站共用支持邮箱（z-image-ai.com、imgai.pro 页面写的都是 support@gptimage-2.com，Plausible 都走 p.imgai.pro）
-- 强（梗站专用）：`data-theme="studio-console"` + CSS 类 `sc-step-card`，攻略页结构 /<梗>-trend、/how-to-do-<梗>-trend、/<梗>-alternatives、/editorial-policy，文案 "Draft Survives Sign-In"、"independent fan tool"、竞品信息"标注核对日期"
+- 强（梗站专用）：`data-theme="studio-console"` + CSS 类 `sc-step-card`，攻略页结构 /<梗>-trend、/how-to-do-<梗>-trend、/<梗>-alternatives、/editorial-policy，文案 "Draft Survives Sign-In"、竞品信息"标注核对日期"
+- 弱：文案 "independent fan tool"（2026-10-23 发现 jeanphilai.com、closedonsundayai.app、burningbridgesai.video 等无关站也写，已从强组拆出降为弱；须与 studio-console 等强指纹合用才有意义）
 - 中：Cloudflare NS 固定三对 harvey/kira、alex/tia、jason/margot（代表 3 个 CF 账号，单看也可能撞别人）
 - 中：MX 是 Zoho（mx/mx2/mx3.zoho.com）+ SPF include:zohomail.com + DMARC p=reject，邮箱 support@<域名>
 - 中：自建 Plausible plausible.zhelogic.com（ZheLogic）

@@ -59,3 +59,10 @@
 - #2：Startup Fame 账号 catalinagarciasimon639 仍是 18 个站，无新增；roadsterai.video、popstarai.video、bulin47ai.video、z-video.co、minih3.pro 页脚外链没有冒出新域名。
 - 新梗词拼域名：用 imageat 10 月 TikTok AI 趋势表 + 近几天的梗（Closed on Sunday、Drake Burning Bridges、Jean Phil Dance、Unforgettable Car 24、Zombie Couple、Female Malfoy、Lamine Yamal、Connor Price、Vampire Duo、Mummy Zombie、Witchcore、Bati Bati、Tung Tung Sahur 等）× .app / aigenerator.com / ai.video / ai.com / .com / ai.app / aivideo.com / .video，查到约 35 个在线的跟风站（Burning Bridges 一个词就有 10+ 个站）。逐个核对：都没有 #1 的两句强文案、/brand/mark.svg、/api/meme/generate、r2.<域名>/site/、G-ZFD4YV344W，NS 也不是 martha/rajeev；都没有 #2 的 p.<域名> Plausible、Zoho MX、studio-console、harvey/kira·alex/tia·jason/margot。结论：都是别的站长。
 - 指纹降级：burningbridgesai.app、unforgettablecar.com 页脚也写 "independent tool, not affiliated with…"，#1 的 "independent tool" 从强降为弱。
+
+### 2026-10-23 例行检查
+未发现新站（#1、#2 都没有）。
+- #1：网页搜两句强文案，只返回已记录的 dimedimebaby.app、ozilgoalaigenerator.com。
+- #2：Startup Fame 账号 catalinagarciasimon639 仍是 18 个站，无新增；popstarai.video、roadsterai.video、bulin47ai.video 页脚外链仍是导航站徽章（saasfame/fazier/twelve.tools 等），没有冒出新梗域名（roadster 页出现的 getstarrd.app 是 Starrd 自家工具站，NS 为 GoDaddy、Outlook 邮箱，不是 #2）。
+- 新梗词拼域名：imageat 10 月 TikTok AI 趋势表 + 大站内页今日/昨日新梗（Charme Dance、Plug Walk、Sorry I Lied、Pumpkin Head、Female Malfoy/Malfoid、Hug In Heaven、Hotel Lobby、Jean Phil、Closed on Sunday、Burning Bridges、Unforgettable Car 等）× .app / aigenerator.com / ai.video / ai.com / .com / ai.app / aivideo.com / .video，DoH 查到约 60 个在线域名，对约 40 个 AI 跟风站拉首页核对：都没有 #1 的两句强文案、/brand/mark.svg、/api/meme/generate、r2.<域名>/site/、G-ZFD4YV344W、NS martha/rajeev；都没有 #2 的 studio-console / sc-step-card、p.<域名> Plausible、Zoho MX、harvey/kira·alex/tia·jason/margot。结论：都是别的站长。
+- 指纹降级："independent fan tool" 今天在 jeanphilai.com、jeanphilaigenerator.com、jeanphilaivideo.com、closedonsundayai.app/com、burningbridgesai.video 等无关站页脚/条款出现，且这些站均无 studio-console / p.Plausible / Zoho / #2 NS 对；该句从 #2 强指纹组里拆出，单独降为弱（studio-console + sc-step-card + 攻略页结构仍为强）。

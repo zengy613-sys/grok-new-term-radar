@@ -45,8 +45,8 @@
 
 ## 5. 站长监听
 1. 读 `site-owner-watch/watchlist.md` 的监听对象、指纹和手段。
-2. 搜标志性文案；certspotter 查新域名（crt.sh 有限流）；新梗词 + "ai generator"/"ai video" 找精确匹配新域名。
-3. 至少匹配 1 条强指纹才算"确认"，只匹配中/弱指纹算"疑似"。写进 `findings.md`。
+2. 搜标志性文案；certspotter 查新域名（crt.sh 有限流）；新梗词 + "ai generator"/"ai video" 找精确匹配新域名；#2 再查 Startup Fame 投稿页和已确认站页脚外链。
+3. 至少匹配 1 条强指纹才算"确认"，只匹配中/弱指纹算"疑似"。写进 `findings.md`。复合强指纹（如 studio-console + sc-step-card）缺一不可；单句免责声明（independent tool / independent fan tool）很多跟风站都写，不够确认。
 4. 发现指纹不独特（被无关站共用）就降级并在 watchlist 注明原因。
 
 ## 经验日志
@@ -62,3 +62,4 @@
 - 2026-10-23：雷达 .md「AI video」专题又是空的，候选词仍偏文本/GitHub；图片视频仍靠 .json sitemap sample（dang 全量新 3 条、aitoptools 全量新 4 条、ai-bot.cn 只给 new[:8]）。ai-bot.cn 再次冒出 689「新」URL，只跟样本里当天页（BaoCut 等），其余按 10-22 经验当重刷。dang/aitoptools 的成人向工具（DeepSwapFace 列表图带 nsfw、CelebMakerAI 自述 porn）直接跳过。snapshot 跑完就被覆盖，当天若要挖 ai-bot 全量 new，得在 run 结束立刻从 sample/new 另存，否则只剩 sample 8 条。
 - 2026-10-23：导航站提醒里，Canva Craft 这类大厂首发模型词比导航站收录早半天到一天，优先跟 X 官宣帖 + 新闻稿；Toolify 的 `/new`（Just launched）在 sitemap 读不到 URL 时仍可用 WebFetch 扫一遍，能补到 Say It Again、Prolifik、CreateVision（Kling 4.0 Online）这类视频工具。
 - 2026-10-23：大站同日上「模型页」比梗页更值得跟——今天 supermaker 上 PixVerse V6 Max、pixomi 上 FLUX 3 Klein，都是可直接占模型词条的信号；两站还同日上了 /video/ai-prompt-generator，提示词工具页可当弱信号。梗/节日页（南瓜头、Sorry I Lied、Charme Dance、Plug Walk）仍可记，但优先级低于新模型名。
+- 2026-10-23：站长监听例行无新站。"independent fan tool" 被 jeanphil / closedonsunday / burningbridges 等多家无关跟风站共用，已从 #2 强指纹组拆出降为弱；确认 #2 梗站仍以 studio-console + sc-step-card + p.<域名> Plausible + Zoho + 固定 NS 对为准。新梗词继续用 imageat 趋势表 + 当天 big-site-watch 新增页（Charme Dance、Plug Walk、Malfoid 等）拼域名，dns.google DoH 批量查 A/NS/MX。
