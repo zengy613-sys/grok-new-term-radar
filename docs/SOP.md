@@ -32,7 +32,7 @@
 4. X 搜索 API 不支持 min_faves，会被自动去掉；用 sort_order=relevancy 并自己看 public_metrics（收藏数、浏览量）筛，名人仿妆类 Nano Banana 提示词帖互动高但不算玩法，跳过。
 
 ## 3. 导航站上新与新词提醒
-1. 看主流导航站最近 24 小时新收录或热度上升的工具；X 上搜新发布、热议的工具和新词。
+1. 看主流导航站最近 24 小时（周一覆盖周末，约 72h）新收录或热度上升的工具；X 上搜新发布、热议的工具和新词。
 2. 和之前提醒、当天雷达日报去重。
 3. 推荐 5–10 个上站工具（每个一句话 + 官网或来源链接）、列新关键词，结尾督促上站。
 4. 最好用的来源是 TAAFT 的 `https://theresanaiforthat.com/just-released/`（WebFetch 能读，带发布时间和趋势排名）；Product Hunt 的 AI 话题页只有老牌产品，没有每日新品。X 上用「launch/introducing + AI video/video model」按 relevancy 搜，最容易抓到新模型名。
@@ -67,3 +67,5 @@
 - 2026-10-25：雷达 .md「AI video」仍空；图片视频继续靠 .json sitemap sample（dang 4 新全进样本：DemoRiff 等；aixploria 18 新/样本 8：Arting、FreeMaker、Any Video Converter 等；aitoptools 0 新）+ HF 热榜（从 state/hf_top.json.gz 可见 LTX-2.5、Drama-3，.md 候选词表只写了 DeepSeek 文本向）。DemoRiff 官网是 demoriff.com（dang 页无直链时可用常见域名探测）。ai-bot.cn 又报 687「新」URL，样本仍是旧条目重刷。toolify sitemap 仍读不到 URL。
 - 2026-10-26：雷达 .md「AI video」仍空；图片视频继续靠 .json sitemap sample（dang 7 新全进样本：Nano Banana 3 等；opentools 3 新：Plimo/Agentik/Panzoe；ai-bot.cn 仅 2 新且含 Hy-Nomas，今天可整表采信，不像前几天 680+ 重刷）+ HF 热榜（state/hf_top：FLUX 3 Klein、SAM 3、LTX-2.5 等，.md 候选词只写了 Nanbeige4.3 文本向）。「Nano Banana 3」官网 nanobanana3.design 是第三方在线站，Google 官方线仍是 Nano Banana 2.1/Pro，上站勿写成官方三代。FLUX 3 Image Klein 开源权重可本地，大站内页 10-23 已见但雷达日报此前未推。toolify sitemap 仍读不到 URL；aixploria/aitoptools 今天 0 新。
 - 2026-10-26：周一玩法简报覆盖周末（since 周五 00:00 UTC）。中文「提示词/工作流/玩法 + Seedance/Kling/Nano Banana」仍比英文泛搜更容易出可复用方法；英文 relevancy 里工具清单/广告帖噪声大，优先看有具体步骤的帖（Skill OS、Draft 样片、区域编辑、工具栈清单）。跳过纯模型对比（周末大量 Seedance vs Kling 复读）与 NSFW/仿妆提示词。
+
+- 2026-10-26：导航站提醒周一覆盖周末（自上次工作日 ~10:00）。TAAFT just-released 仍最稳：按 Released Xh/Xd 筛，优先 #1 Trending / 浏览量过万的图视频（今天 Ella by Novella v2 #1、Mage v2 ~2.6万浏览）。Toolify `/new` 可补配音/多模型站（SoulDub、Orylia）。X 上 HeyGen Video 1 周末仍热，但 10-22 已以 VideoGen Model 1 推过，勿重复；中文圈 PixVerse V6 Max 适合做新关键词。跳过 AI 女友/整形模拟等非导航站向。
