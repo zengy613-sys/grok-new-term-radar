@@ -14,6 +14,7 @@ https://supermaker.ai/blog/ai-video-prompt-mistakes
 https://supermaker.ai/blog/ai-walking-video-generator-create-realistic-walking-videos-free
 https://supermaker.ai/blog/best-ai-replace-prompts-to-transform-your-photos-instantly
 https://supermaker.ai/blog/bytedances-world-model-from-generating-video-to-generating-a-space-you-can-walk-into
+https://supermaker.ai/blog/canva-craft
 https://supermaker.ai/blog/chatgpt-alternative-image-edit-ai-8-best-tools-to-try-in-2026
 https://supermaker.ai/blog/collage-photo-prompt-15-copy-paste-ai-prompts-for-stunning-photo-collage-edits
 https://supermaker.ai/blog/complete-seedream-40-guide-unified-ai-image-generation-and-editing-in-one-model
@@ -89,6 +90,7 @@ https://supermaker.ai/blog/how-to-scale-your-content-with-the-ultimate-bulk-vide
 https://supermaker.ai/blog/how-to-try-different-hairstyle-and-hair-color-with-supermaker-ai-hairstyle-changer
 https://supermaker.ai/blog/how-to-try-on-different-outfit-with-supermaker-ai-dress-change-filter-online
 https://supermaker.ai/blog/how-to-turn-gpt-images-25-sprite-sheets-into-animated-gifs
+https://supermaker.ai/blog/how-to-use-burger-thru-window
 https://supermaker.ai/blog/how-to-use-kling-26-motion-control-ai-free-full-tutorial-ai-baby-dance-guide
 https://supermaker.ai/blog/how-to-use-minimax-h3
 https://supermaker.ai/blog/hunyuan-image-30-mastery-architecture-performance-and-practical-guide
@@ -323,6 +325,7 @@ https://supermaker.ai/image/ai-photo-enhancer
 https://supermaker.ai/image/ai-photo-prank
 https://supermaker.ai/image/ai-photo-restoration
 https://supermaker.ai/image/ai-pixel-image-generator
+https://supermaker.ai/image/ai-pokemon-generator
 https://supermaker.ai/image/ai-pokemon-trainer-generator
 https://supermaker.ai/image/ai-polaroid-photo
 https://supermaker.ai/image/ai-portrait-generator
@@ -634,6 +637,7 @@ https://supermaker.ai/video/animate-replace
 https://supermaker.ai/video/anything-to-video
 https://supermaker.ai/video/asmr-video-generator
 https://supermaker.ai/video/assets-to-video
+https://supermaker.ai/video/bama-bound-ai
 https://supermaker.ai/video/bigfoot-video-generator
 https://supermaker.ai/video/blog/discovering-higgsfield-mixed-media-a-game-changer-for-video-stylization
 https://supermaker.ai/video/blog/exploring-kling-30-how-advanced-motion-control-is-transforming-ai-video-creation
@@ -647,19 +651,24 @@ https://supermaker.ai/video/blog/lingbot-world-the-dawn-of-interactive-digital-s
 https://supermaker.ai/video/blog/the-ultimate-veo-3-prompt-guide-for-ai-video-generation
 https://supermaker.ai/video/blog/top-7-alternatives-to-kling-26-i-tried-recommend
 https://supermaker.ai/video/blog/unlocking-the-magic-of-pardon-dance-the-viral-video-effect-taking-over-social-media
+https://supermaker.ai/video/bottle-kick-challenge
 https://supermaker.ai/video/broom-riding-ai
 https://supermaker.ai/video/bulin-47-ai-video
 https://supermaker.ai/video/bulk-video-generator
 https://supermaker.ai/video/bullet-time-video
+https://supermaker.ai/video/burger-thru-window
 https://supermaker.ai/video/burning-bridges-ai-video-generator
 https://supermaker.ai/video/carpool-karaoke-ai-video
 https://supermaker.ai/video/cartoon-to-video
 https://supermaker.ai/video/cat-eating-food
 https://supermaker.ai/video/charme-dance-ai
+https://supermaker.ai/video/chatgpt-millionaire
 https://supermaker.ai/video/christmas-snow-globe-filter
+https://supermaker.ai/video/closed-on-sunday
 https://supermaker.ai/video/crazy-frog-ai
 https://supermaker.ai/video/day-to-night
 https://supermaker.ai/video/deep-sea-viral-video
+https://supermaker.ai/video/dime-dime-baby-ai
 https://supermaker.ai/video/enzo-fernandez-celebration
 https://supermaker.ai/video/fake-boyfriend-filter
 https://supermaker.ai/video/first-last-frame
@@ -712,6 +721,7 @@ https://supermaker.ai/video/photo-to-dance
 https://supermaker.ai/video/pixverse-v6
 https://supermaker.ai/video/pixverse-v6-max
 https://supermaker.ai/video/plug-walk-filter
+https://supermaker.ai/video/ramalama-ai
 https://supermaker.ai/video/rumpelstiltskin-ai-dance-video
 https://supermaker.ai/video/seedance-1-5-pro
 https://supermaker.ai/video/seedance-2-0
@@ -728,10 +738,12 @@ https://supermaker.ai/video/sora-ai-video
 https://supermaker.ai/video/sora-image-to-video
 https://supermaker.ai/video/sora-text-to-video
 https://supermaker.ai/video/storm-2-dance
+https://supermaker.ai/video/talk-dirty-dance-ai
 https://supermaker.ai/video/text-to-video
 https://supermaker.ai/video/the-cursed
 https://supermaker.ai/video/tiptoeing-in-my-jordans
 https://supermaker.ai/video/toc-toc-ai-dance
+https://supermaker.ai/video/unforgettable-car-trend
 https://supermaker.ai/video/url-to-video-generator
 https://supermaker.ai/video/valentine-day-video-maker
 https://supermaker.ai/video/veo
