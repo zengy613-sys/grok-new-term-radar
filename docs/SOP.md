@@ -70,3 +70,4 @@
 
 - 2026-10-26：导航站提醒周一覆盖周末（自上次工作日 ~10:00）。TAAFT just-released 仍最稳：按 Released Xh/Xd 筛，优先 #1 Trending / 浏览量过万的图视频（今天 Ella by Novella v2 #1、Mage v2 ~2.6万浏览）。Toolify `/new` 可补配音/多模型站（SoulDub、Orylia）。X 上 HeyGen Video 1 周末仍热，但 10-22 已以 VideoGen Model 1 推过，勿重复；中文圈 PixVerse V6 Max 适合做新关键词。跳过 AI 女友/整形模拟等非导航站向。
 - 2026-10-26：大站内页周一例行覆盖周末（自周五快照）。supermaker 一次冒出 12 新页，几乎全是梗/舞蹈视频（Burger Thru Window、Closed On Sunday、Talk Dirty Dance、Ramalama 等），模型/工具向只有 Canva Craft 博客确认页和 AI Pokémon Generator；按 10-23 经验，梗页可记并喂给站长监听拼域名，优先级仍低于新模型名。pixomi/kimg 周末无变化。curl --compressed 取 title/description 仍够用。
+- 2026-10-26：站长监听例行无新站。盒子直连 startupfa.me/catalinagarciasimon639 被 Vercel Security Checkpoint 拦，改用 WebSearch 摘要核对账号挂站列表（仍 18）。单凭 p.<域名> 有 A 记录不够（charmedanceai.com、burningbridgesai.app 都有），须首页实际加载 p. Plausible 脚本 + Zoho MX + 固定 NS 对（或 Startup Fame 同账号）才确认 #2。今日优先梗来自大站内页新页（Burger Thru Window / Ramalama / Talk Dirty Dance 等）+ imageat 十月趋势表，拼域名后跟风站很多但均无 #1/#2 强指纹。
